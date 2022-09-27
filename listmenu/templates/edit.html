@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit Food</title>
+</head>
+<body>
+	<div>Edit Data</div>
+	<br>
+	<form method="post" action="editedfood/{{ thefood.id }}">
+		{% csrf_token %}
+		<div>Name</div>
+		<input type="type" name="name" value="{{ thefood.foods }}">
+		<br>
+		<div>Price</div>
+		<input type="type" name="price" value="{{ thefood.price }}">
+		<input type="submit" name="Submit">
+	</form>
+
+</body>
+</html>

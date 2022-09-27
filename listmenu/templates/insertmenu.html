@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Insert New Menu</title>
+</head>
+<body>
+	<h1>Insert New Menu</h1>
+	<a href="{% url 'index' %}">Home</a>
+	<br><br>
+	<div>
+		<form action="inserted/" method="post">
+			{% csrf_token %}
+			<div>Menu Type</div>
+			<select name="category">
+				<option value="1">Food</option>
+				<option value="2">Drink</option>
+			</select>
+			<div>Menu Name</div>
+			<input type="type" name="name">
+			<br>
+			<div>Input Price</div>
+			<input type="type" name="price">
+			<br>
+			<input type="submit" name="Submit">
+		</form>
+	</div>
+</body>
+</html>

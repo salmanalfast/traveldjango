@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit Drink</title>
+</head>
+<body>
+	<div><h1>Edit Beverage's Data</h1></div>
+	<br>
+	<form action="editeddrink/{{ drink.id }}" method="post">
+		{% csrf_token %}
+		<div>Beverage's Name</div>
+		<input type="type" name="name" value="{{ drink.drinks }}">
+		<br>
+		<div>Beverage's Price</div>
+		<input type="type" name="price" value="{{ drink.price }}">
+		<input type="submit" name="Submit">
+	</form>
+</body>
+</html>
